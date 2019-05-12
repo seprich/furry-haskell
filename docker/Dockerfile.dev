@@ -1,0 +1,14 @@
+FROM amazonlinux:2.0.20190508
+ARG UID
+ARG GID
+
+RUN yum install -y perl make automake gcc gmp-devel libffi zlib gzip xz tar git gnupg
+RUN yum install -y zlib-devel
+RUN curl -sSL https://get.haskellstack.org/ | sh
+
+RUN groupadd --gid $GID box
+RUN adduser -d "/home/box" --shell "/bin/bash" --uid $UID --gid $GID box
+
+WORKDIR /home/box/workdir
+USER box:box
+ENV PATH $PATH:/home/box/.local/bin

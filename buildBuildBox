@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker build -f ./docker/Dockerfile.dev --build-arg "UID=$(id -u)" --build-arg "GID=$(id -g)" --rm --tag haskelambda:latest .

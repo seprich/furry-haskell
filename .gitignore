@@ -1,0 +1,5 @@
+out/
+.stack-work/
+.terraform/
+furry-haskell.cabal
+*~

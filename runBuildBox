@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#docker create --rm --name awsghcbox haskelambda:latest /bin/bash
+#docker cp src awsghcbox:/workdir/src
+#docker start -a awsghcbox
+
+docker run --rm -it -v $(pwd):/home/box/workdir haskelambda:latest /bin/bash
