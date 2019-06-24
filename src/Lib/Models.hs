@@ -1,10 +1,11 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DuplicateRecordFields #-}
 module Lib.Models
     ( InvocationContext (..)
     , ErrorResponse (..)
     ) where
-
+import RIO
 import Data.Aeson (Value)
 
 data InvocationContext = InvocationContext

@@ -25,6 +25,7 @@ dependencies:
 library:
   source-dirs: src
   dependencies:
+    - rio
     - aeson
 
 executables:
@@ -37,6 +38,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - furry-haskell
+    - rio
     - http-types
     - http-client
     - http-conduit
